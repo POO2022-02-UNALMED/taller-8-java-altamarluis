@@ -1,16 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package futbol;
 
 import static java.lang.Math.abs;
 
-/**
- *
- * @author LENOVO
- */
+
 public class Jugador extends Futbolista {
     public short golesMarcados;
     public byte dorsal;
@@ -32,8 +25,9 @@ public class Jugador extends Futbolista {
         return false;
     }
     @Override
-    public int compareTo(Futbolista o) {
-       return abs(this.getEdad() - o.getEdad());
+    public int compareTo(Object o) {
+       Jugador j = (Jugador)o;
+       return abs(this.getEdad() - j.getEdad());
     }
     @Override
     public String toString(){
